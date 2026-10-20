@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>world Countries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🌍 Countries Dashboard</h1>
+
+    <div class="controls">
+        <input id="searchInput" type="text" placeholder="Search by name..." aria-label="Search by name" />
+        <select id="regionSelect" aria-label="Region">
+            <option value="">All Regions</option>
+            <option value="africa">Africa</option>
+            <option value="americas">Americas</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+        </select>
+        <select id="sortSelect" aria-label="Sort">
+            <option value="name">Sort by Name</option>
+            <option value="population">Sort by Population</option>
+        </select>
+        <select id="orderSelect" aria-label="Order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    </div>
+
+    <div id="status"></div>
+    <div id="details" style="display:none;"></div>
+    <!-- Add this line -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Flag</th>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Region</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody id="results"></tbody>
+    </table>
+
+    <div class="pager">
+        <button id="prevBtn" type="button">⬅ Prev</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn" type="button">Next ➡</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

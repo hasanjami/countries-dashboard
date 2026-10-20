@@ -1,0 +1,260 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: #fff;
+    background: #000 url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg) repeat;
+    background-size: cover;
+    animation: stars 205s linear alternate;
+    min-height: 100vh;
+}
+
+@keyframes stars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+
+/* --- Main Title --- */
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #2d7ff9;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000;
+}
+
+
+/* --- Controls --- */
+
+.controls {
+    margin: 30px auto 15px auto;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+    padding: 8px 12px;
+    border: 1px solid #2d7ff9;
+    border-radius: 6px;
+    background: #181c24;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #fff;
+    outline: none;
+    background: #232a3a;
+}
+
+
+/* --- Table --- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #181c24;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.25);
+    color: #fff;
+}
+
+th,
+td {
+    padding: 12px 8px;
+    text-align: center;
+}
+
+th {
+    background: #222b3a;
+    color: #2d7ff9;
+    font-weight: 600;
+    border-bottom: 2px solid #2d7ff9;
+}
+
+tr {
+    transition: background 0.2s;
+}
+
+tr:hover {
+    background: #232a3a;
+}
+
+td {
+    border-bottom: 1px solid #232a3a;
+}
+
+img {
+    width: 40px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.20);
+}
+
+
+/* --- Pager --- */
+
+.pager {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pager button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2d7ff9;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pager button:disabled {
+    background: #222b3a;
+    cursor: not-allowed;
+}
+
+.pager span {
+    font-size: 1.1rem;
+    color: #2d7ff9;
+    font-weight: 500;
+    align-self: center;
+}
+
+
+/* --- Status --- */
+
+#status {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+    color: #2d7ff9;
+    font-size: 1.05rem;
+    text-shadow: 0 2px 8px #000;
+}
+
+
+/* --- Details Card --- */
+
+.details-card {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #181c24;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.25);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.details-card h2 {
+    margin-top: 0;
+    color: #2d7ff9;
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px #000;
+}
+
+.details-card img {
+    width: 160px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.20);
+    margin-bottom: 24px;
+}
+
+.details-card p {
+    margin: 12px 0;
+}
+
+.back-btn {
+    background: #2d7ff9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 18px;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: #1a5fd6;
+}
+
+
+/* --- Unified Accent and Glow --- */
+
+.details-card,
+table {
+    border: 2px solid #2d7ff9;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.25), 0 0 24px #2d7ff944;
+}
+
+
+/* --- Controls Accent --- */
+
+.controls input,
+.controls select {
+    box-shadow: 0 0 8px #2d7ff944;
+}
+
+
+/* --- Button Glow --- */
+
+.pager button,
+.back-btn {
+    box-shadow: 0 0 8px #2d7ff944;
+}
+
+.pager button:hover,
+.back-btn:hover {
+    background: #1a5fd6;
+    box-shadow: 0 0 16px #2d7ff9cc;
+}
+
+
+/* --- Consistent Section Spacing --- */
+
+.controls {
+    margin-bottom: 24px;
+}
+
+#details {
+    margin-bottom: 24px;
+}
+
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+    .details-card {
+        max-width: 95vw;
+        padding: 16px 4vw;
+    }
+    table,
+    th,
+    td {
+        font-size: 0.95rem;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
